@@ -1,0 +1,10 @@
+[
+  {
+      "user": "Bibliophile",
+      "id": "bibliofile/lists-editor",
+      "package": "http://localhost:8003/build/bundle.js",
+      "title": "List Manager",
+      "description": "Adds commands for managing world lists.",
+      "env": "all"
+  }
+]

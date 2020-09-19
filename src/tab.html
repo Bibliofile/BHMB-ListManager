@@ -1,0 +1,71 @@
+<template>
+  <details>
+    <summary></summary>
+    <div class="field">
+      <label class="label">List ID (no spaces, unique)</label>
+      <div class="control">
+        <input type="text" class="input" data-for="id" />
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Server List</label>
+      <select data-for="list" class="select">
+        <option value="adminlist">Adminlist</option>
+        <option value="modlist">Modlist</option>
+        <option value="whitelist">Whitelist</option>
+        <option value="blacklist">Blacklist</option>
+      </select>
+    </div>
+    <div class="field">
+      <label class="label">List Contents</label>
+      <div class="control">
+        <textarea class="textarea" data-for="content"></textarea>
+      </div>
+    </div>
+    <button class="button is-small is-danger is-outlined" data-do="delete">Delete</button>
+
+  </details>
+
+  <hr>
+</template>
+
+<div id="manpages" class="container is-widescreen">
+  <h3 class="title">List Editor</h3>
+
+  <span class="button is-primary is-adding-message">+</span>
+
+  <p>
+    This extension lets you define and apply lists with commands. This can be used to apply a lockdown, whitelisting
+    well known players, or reset staff lists.
+  </p>
+
+  <div class="message is-warning">
+    <div class="message-header">
+      <p>Warning</p>
+    </div>
+    <div class="message-body">
+      <p>Adding a user to a list DOES NOT automatically add them to the server list.
+      </p>
+    </div>
+  </div>
+
+  <h3 class="subtitle">Commands</h3>
+
+  <p>Commands can only be run by the server owner and SERVER.</p>
+
+  <ul>
+    <li><code>/list apply &lt;list id&gt;</code> - apply a list, will overwrite the existing server list.</li>
+    <!-- <li><code>/list &lt;list id&gt; add &lt;name&gt;</code> (ADMIN/MOD/OWNER only) - add <code>name</code> to the
+      mentioned list.</li>
+    <li><code>/list &lt;list id&gt; remove &lt;name&gt;</code> (ADMIN/MOD/OWNER only) - remove <code>name</code> from
+      the mentioned list.</li> -->
+    <li><code>/list reset &lt;list id&gt;</code> - resets the server list to the <em>previous</em> list. When the bot is
+      reloaded, previous lists are lost.</li>
+  </ul>
+
+  <hr>
+
+  <div class="lists">
+    <!-- lists go here -->
+  </div>
+</div>
